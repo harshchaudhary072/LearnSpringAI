@@ -1,5 +1,7 @@
 package com.spring.ai.firstproject.controllers;
 
+import java.util.List;
+
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.ResponseEntity;
@@ -8,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.spring.ai.firstproject.entitiy.Tut;
 import com.spring.ai.firstproject.service.ChatService;
 
 @RestController
@@ -44,7 +47,7 @@ public class ChatController {
 //	}
 	
 	@GetMapping("/chat")
-	public ResponseEntity<String> chat(@RequestParam(value ="q", required = true) String q){
+	public ResponseEntity<Tut> chat(@RequestParam(value ="q", required = true) String q){
 		
 		
 		return ResponseEntity.ok(chatService.chat(q));

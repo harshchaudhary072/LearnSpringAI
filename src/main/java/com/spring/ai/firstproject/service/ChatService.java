@@ -1,7 +1,13 @@
 package com.spring.ai.firstproject.service;
 
+import java.util.List;
+
+import com.spring.ai.firstproject.entitiy.Tut;
+
 public interface ChatService {
 	
-	String chat(String query);
+	Tut chat(String query);
+	
+	public String chatTemplate();
 
 }
